@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="S.M.A.R.T.">
@@ -12,6 +16,11 @@
     <link rel="stylesheet" crossorigin href="./assets/index-D2n765jG.css">
   </head>
   <body>
+    <script>
+      window.addEventListener('error', function(e) {
+        document.body.innerHTML += '<div style="position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:red;padding:20px;z-index:9999;overflow:auto;font-family:monospace;"><h2>Init Error</h2><pre>' + e.message + '\\n' + e.filename + ':' + e.lineno + '</pre></div>';
+      }, true);
+    </script>
     <div id="root"></div>
   </body>
 </html>
